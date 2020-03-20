@@ -1,0 +1,12 @@
+##  Account GLOBAL values which will only change once per account, but remain the same between regions, should be 'hardcoded' here.
+##  Values which need to change from one environment to another, should be abstracted to the appropriate .env file.
+
+namespace: '${namespace}'
+stacker_bucket: '${bucketPrefix}${region}'
+
+
+stacks:
+  test-runway-lambda1:
+    template_path: ../templates/sqs.yml
+    variables:
+      TestVar: ${test_var}

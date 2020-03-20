@@ -1,0 +1,9 @@
+---
+# See full syntax at https://docs.onica.com/projects/runway/en/latest/
+deployments:
+  - modules:
+      - module1
+      - module2
+    parallel_regions:
+      - us-west-2
+      - us-east-1

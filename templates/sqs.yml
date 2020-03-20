@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: some description
+
+Parameters:
+  TestVar:
+    Description: test
+    Type: String
+    Default: 'ERROR'
+
+Resources:
+  someQueue:
+    Type: AWS::SQS::Queue
+    Properties: 
+      QueueName: !Sub ${TestVar}-${AWS::Region}
